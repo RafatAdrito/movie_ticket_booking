@@ -89,6 +89,11 @@ public class welcome extends javax.swing.JFrame {
         rateus.setForeground(new java.awt.Color(255, 255, 255));
         rateus.setText("Rate Us");
         rateus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        rateus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rateusMouseClicked(evt);
+            }
+        });
 
         buytickets.setBackground(new java.awt.Color(51, 51, 255));
         buytickets.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -142,9 +147,13 @@ public class welcome extends javax.swing.JFrame {
 
     private void buyticketsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyticketsMouseClicked
         this.dispose();
-        Movie_Selector yourNextWindow = new Movie_Selector();
-        yourNextWindow.setVisible(true);
+        Movie_Selector nextwindow = new Movie_Selector();
+        nextwindow.setVisible(true);
     }//GEN-LAST:event_buyticketsMouseClicked
+
+    private void rateusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rateusMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rateusMouseClicked
 
     /**
      * @param args the command line arguments
