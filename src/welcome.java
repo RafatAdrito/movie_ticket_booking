@@ -95,6 +95,11 @@ public class welcome extends javax.swing.JFrame {
         buytickets.setForeground(new java.awt.Color(255, 255, 255));
         buytickets.setText("Buy Tickets");
         buytickets.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buytickets.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buyticketsMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -134,6 +139,12 @@ public class welcome extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buyticketsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyticketsMouseClicked
+        this.dispose();
+        Movie_Selector yourNextWindow = new Movie_Selector();
+        yourNextWindow.setVisible(true);
+    }//GEN-LAST:event_buyticketsMouseClicked
 
     /**
      * @param args the command line arguments
