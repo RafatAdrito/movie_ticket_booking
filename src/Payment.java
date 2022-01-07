@@ -87,12 +87,22 @@ public class Payment extends javax.swing.JFrame {
         Next.setForeground(new java.awt.Color(255, 255, 255));
         Next.setText("Back");
         Next.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Next.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                NextMouseClicked(evt);
+            }
+        });
 
         Next1.setBackground(new java.awt.Color(51, 51, 255));
         Next1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Next1.setForeground(new java.awt.Color(255, 255, 255));
         Next1.setText("Next");
         Next1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Next1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Next1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -153,6 +163,18 @@ public class Payment extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Next1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Next1MouseClicked
+        this.dispose();
+        endingpage nextwindow = new endingpage();
+        nextwindow.setVisible(true);
+    }//GEN-LAST:event_Next1MouseClicked
+
+    private void NextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextMouseClicked
+        this.dispose();
+        Seatselecting nextwindow = new Seatselecting();
+        nextwindow.setVisible(true);
+    }//GEN-LAST:event_NextMouseClicked
 
     /**
      * @param args the command line arguments
