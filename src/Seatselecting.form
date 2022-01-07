@@ -209,6 +209,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BackMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Next">
           <Properties>
@@ -226,6 +229,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="NextMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Submit">
           <Properties>
