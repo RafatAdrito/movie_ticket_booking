@@ -1,3 +1,12 @@
+
+import java.awt.Color;
+
+
+
+
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -410,6 +419,11 @@ public class Seatselecting extends javax.swing.JFrame {
                 SelectblockItemStateChanged(evt);
             }
         });
+        Selectblock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SelectblockActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -530,6 +544,12 @@ public class Seatselecting extends javax.swing.JFrame {
     private void SelectblockItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_SelectblockItemStateChanged
         
     }//GEN-LAST:event_SelectblockItemStateChanged
+
+    private void SelectblockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectblockActionPerformed
+        if(Selectblock.getSelectedIndex()==1){
+            leftblock.setBackground(Color.WHITE);
+        }
+    }//GEN-LAST:event_SelectblockActionPerformed
 
     /**
      * @param args the command line arguments
