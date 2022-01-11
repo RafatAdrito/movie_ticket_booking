@@ -951,21 +951,21 @@ public class Seatselecting extends javax.swing.JFrame {
     private void SelectblockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectblockActionPerformed
         
     }//GEN-LAST:event_SelectblockActionPerformed
-    public int s=0;
-    boolean flag=false;
+    public int s=0;  //To count total cost of seats
+    boolean flag=false;  //To select and deselect seats
     private void l1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l1ActionPerformed
         
-        if(flag==false){
-            s = s+300;
-            enterseatnumber.setText(Integer.toString(s));
-            l1.setBackground(Color.BLUE);
-            flag=true;
+        if(flag==false){  //for selecting
+            s = s+300;  //adding money for one seat
+            enterseatnumber.setText(Integer.toString(s));  //displaying money
+            l1.setBackground(Color.BLUE);  //color change due to selecting 
+            flag=true;  //For deselecting advantage
         }
-        else if(flag==true){
-            s=s-300;
-            enterseatnumber.setText(Integer.toString(s));
-            l1.setBackground(Color.decode("#f0f0f0"));
-            flag=false;
+        else if(flag==true){  //for deselecting
+            s=s-300;  //if the user dont want the seat then the money will be reduced
+            enterseatnumber.setText(Integer.toString(s));  //money will be reduced 
+            l1.setBackground(Color.decode("#f0f0f0"));  //will go back to default color 
+            flag=false; //again for selecting
         }
     }//GEN-LAST:event_l1ActionPerformed
 
