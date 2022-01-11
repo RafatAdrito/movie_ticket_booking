@@ -32,8 +32,8 @@ public class Movie_Selector extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         poster = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        next = new javax.swing.JButton();
+        back = new javax.swing.JButton();
+        next1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Time = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
@@ -67,30 +67,30 @@ public class Movie_Selector extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Back");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        back.setBackground(new java.awt.Color(51, 51, 255));
+        back.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 255, 255));
+        back.setText("Back");
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                backMouseClicked(evt);
             }
         });
 
-        next.setBackground(new java.awt.Color(51, 51, 255));
-        next.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        next.setForeground(new java.awt.Color(255, 255, 255));
-        next.setText("Next");
-        next.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        next.addMouseListener(new java.awt.event.MouseAdapter() {
+        next1.setBackground(new java.awt.Color(51, 51, 255));
+        next1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        next1.setForeground(new java.awt.Color(255, 255, 255));
+        next1.setText("Next");
+        next1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        next1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nextMouseClicked(evt);
+                next1MouseClicked(evt);
             }
         });
-        next.addActionListener(new java.awt.event.ActionListener() {
+        next1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nextActionPerformed(evt);
+                next1ActionPerformed(evt);
             }
         });
 
@@ -145,18 +145,18 @@ public class Movie_Selector extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
-                        .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(next1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Time, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Shows, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Shows, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(34, 34, 34))
         );
         jPanel1Layout.setVerticalGroup(
@@ -165,9 +165,9 @@ public class Movie_Selector extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Time, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -177,8 +177,8 @@ public class Movie_Selector extends javax.swing.JFrame {
                 .addComponent(Shows, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(next1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23))
         );
 
@@ -204,16 +204,16 @@ public class Movie_Selector extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ShowsActionPerformed
 
-    private void nextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextMouseClicked
+    private void next1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_next1MouseClicked
         
         
-    }//GEN-LAST:event_nextMouseClicked
+    }//GEN-LAST:event_next1MouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
         this.dispose();
         welcome nextwindow = new welcome();
         nextwindow.setVisible(true);
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_backMouseClicked
 
     private void TimeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_TimeItemStateChanged
         
@@ -233,17 +233,23 @@ public class Movie_Selector extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_ShowsItemStateChanged
 
-    private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
-       if(date.getDateFormatString().equals("")){
+    private void next1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_next1ActionPerformed
+        String s1=((javax.swing.JTextField)date.getDateEditor().getUiComponent()).getText();
+//        Datestring.setText(s1);
+//        String s2=Datestring.getText();
+        if(s1.equals("")){
             javax.swing.JFrame f=new javax.swing.JFrame();
             javax.swing.JOptionPane.showMessageDialog(f,"Please select date.");
         }
+        
         else{
             this.dispose();
             Seatselecting nextwindow = new Seatselecting();
             nextwindow.setVisible(true);
         }
-    }//GEN-LAST:event_nextActionPerformed
+            
+        
+    }//GEN-LAST:event_next1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,14 +289,14 @@ public class Movie_Selector extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox Shows;
     private javax.swing.JComboBox Time;
+    private javax.swing.JButton back;
     private com.toedter.calendar.JDateChooser date;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton next;
+    private javax.swing.JButton next1;
     private javax.swing.JLabel poster;
     // End of variables declaration//GEN-END:variables
 }

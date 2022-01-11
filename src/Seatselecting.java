@@ -695,6 +695,11 @@ public class Seatselecting extends javax.swing.JFrame {
                 NextMouseClicked(evt);
             }
         });
+        Next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NextActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -756,9 +761,7 @@ public class Seatselecting extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextMouseClicked
-        this.dispose();
-        Payment nextwindow = new Payment();
-        nextwindow.setVisible(true);
+       
     }//GEN-LAST:event_NextMouseClicked
 
     private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
@@ -1496,6 +1499,20 @@ public class Seatselecting extends javax.swing.JFrame {
             flag35=false;
         }
     }//GEN-LAST:event_r16ActionPerformed
+
+    private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
+         String s1=enterseatnumber.getText();
+         if(s1.equals("")||s1.equals("0")){
+             javax.swing.JFrame f=new javax.swing.JFrame();
+             javax.swing.JOptionPane.showMessageDialog(f,"Please select a seat.");
+         }
+         else{
+             this.dispose();
+             Payment nextwindow = new Payment();
+             nextwindow.setVisible(true);
+         }
+         
+    }//GEN-LAST:event_NextActionPerformed
 
     /**
      * @param args the command line arguments
