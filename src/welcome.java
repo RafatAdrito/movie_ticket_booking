@@ -31,7 +31,7 @@ public class welcome extends javax.swing.JFrame {
         mainlogo = new javax.swing.JLabel();
         maintitle = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        rateus = new javax.swing.JButton();
+        Exit = new javax.swing.JButton();
         buytickets = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,14 +84,19 @@ public class welcome extends javax.swing.JFrame {
             .addGap(0, 113, Short.MAX_VALUE)
         );
 
-        rateus.setBackground(new java.awt.Color(51, 51, 255));
-        rateus.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        rateus.setForeground(new java.awt.Color(255, 255, 255));
-        rateus.setText("Rate Us");
-        rateus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        rateus.addMouseListener(new java.awt.event.MouseAdapter() {
+        Exit.setBackground(new java.awt.Color(51, 51, 255));
+        Exit.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Exit.setForeground(new java.awt.Color(255, 255, 255));
+        Exit.setText("Exit");
+        Exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                rateusMouseClicked(evt);
+                ExitMouseClicked(evt);
+            }
+        });
+        Exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitActionPerformed(evt);
             }
         });
 
@@ -115,7 +120,7 @@ public class welcome extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rateus, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buytickets, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(323, 323, 323))
         );
@@ -126,7 +131,7 @@ public class welcome extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(buytickets, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rateus, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -151,9 +156,13 @@ public class welcome extends javax.swing.JFrame {
         nextwindow.setVisible(true);
     }//GEN-LAST:event_buyticketsMouseClicked
 
-    private void rateusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rateusMouseClicked
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_rateusMouseClicked
+    }//GEN-LAST:event_ExitMouseClicked
+
+    private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,12 +200,12 @@ public class welcome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Exit;
     private javax.swing.JPanel Heading;
     private javax.swing.JButton buytickets;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel mainlogo;
     private javax.swing.JLabel maintitle;
-    private javax.swing.JButton rateus;
     // End of variables declaration//GEN-END:variables
 }
