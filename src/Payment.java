@@ -35,7 +35,7 @@ public class Payment extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         payment = new javax.swing.JComboBox();
         paybutton = new javax.swing.JButton();
-        Next = new javax.swing.JButton();
+        back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -86,14 +86,14 @@ public class Payment extends javax.swing.JFrame {
             }
         });
 
-        Next.setBackground(new java.awt.Color(51, 51, 255));
-        Next.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Next.setForeground(new java.awt.Color(255, 255, 255));
-        Next.setText("Back");
-        Next.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Next.addMouseListener(new java.awt.event.MouseAdapter() {
+        back.setBackground(new java.awt.Color(51, 51, 255));
+        back.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 255, 255));
+        back.setText("Back");
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                NextMouseClicked(evt);
+                backMouseClicked(evt);
             }
         });
 
@@ -105,7 +105,7 @@ public class Payment extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 319, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -126,7 +126,7 @@ public class Payment extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(paybutton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
-                .addComponent(Next, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -148,11 +148,11 @@ public class Payment extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextMouseClicked
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
         this.dispose();
         Seatselecting nextwindow = new Seatselecting();
         nextwindow.setVisible(true);
-    }//GEN-LAST:event_NextMouseClicked
+    }//GEN-LAST:event_backMouseClicked
 
     private void paymentItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_paymentItemStateChanged
         if(evt.getStateChange()==ItemEvent.SELECTED){
@@ -210,7 +210,7 @@ public class Payment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Next;
+    private javax.swing.JButton back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

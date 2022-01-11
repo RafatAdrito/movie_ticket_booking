@@ -90,7 +90,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                          <Component id="Next" min="-2" pref="111" max="-2" attributes="0"/>
+                          <Component id="back" min="-2" pref="111" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="319" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -118,7 +118,7 @@
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="paybutton" min="-2" pref="37" max="-2" attributes="0"/>
                   <EmptySpace pref="137" max="32767" attributes="0"/>
-                  <Component id="Next" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="back" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -171,7 +171,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paybuttonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Next">
+        <Component class="javax.swing.JButton" name="back">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="33" red="33" type="rgb"/>
@@ -188,7 +188,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="NextMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="backMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
